@@ -28,7 +28,7 @@ const prouter = require('./routes/personRoutes')
 const mrouter = require('./routes/menuRoutes')
 
 app.use('/person',prouter)
-app.use('/menu',mrouter)
+app.use('/menu',middleAuthenticate,mrouter)
 
 const port = process.env.PORT || 3000;
 
